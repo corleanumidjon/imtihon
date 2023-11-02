@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none 0;
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  border: 0 solid;
+  background: none;
+  box-sizing: border-box;
+}
+
+*,
+*::-webkit-outer-spin-button,
+*::-webkit-inner-spin-button,
+*::-webkit-search-cancel-button,
+*::-webkit-search-results-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Orqa fonni xohlagan rangga o'zgartiring */
+  backdrop-filter: blur(5px); /* Blur efekti */
+  z-index: 9999; /* Modalni orqasiga qo'yib chiqish */
+}
+
+.float-label-input {
+  margin: 20px 0;
+}
+
+.float-label-input:focus-within label,
+.float-label-input input:not(:placeholder-shown) + label {
+  transform: translateY(-1.5rem) scale(0.75);
+  background-color: white;
+}
+
+.user_modal {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(100px);
+}
